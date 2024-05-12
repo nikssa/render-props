@@ -15,3 +15,9 @@ body {
   transition: all ease-in-out 0.15s;
   transform: translate(-15px, -15px);
 }
+
+.left-bottom {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
