@@ -1,6 +1,6 @@
 import Mouse from './components/Mouse';
 import Cat from './components/Cat';
-import { Props } from './types';
+import { Props, StateProps } from './types';
 import LogInProvider from './components/LogInProvider';
 import { useState } from 'react';
 import SignButton from './components/SignButton';
@@ -26,16 +26,16 @@ function App(props: { message: string }) {
         )}
       </Mouse>
       <div className='left-bottom'>
-        <Counter
-          render={(count: number, incrementCount: () => void) => (
+        <Counter>
+          {(count: number, incrementCount: () => void) => (
             <ClickCounter count={count} incrementCount={incrementCount} />
           )}
-        />
-        <Counter
-          render={(count: number, incrementCount: () => void) => (
+        </Counter>
+        <Counter>
+          {(count: number, incrementCount: () => void) => (
             <HoverCounter count={count} incrementCount={incrementCount} />
           )}
-        />
+        </Counter>
       </div>
     </>
   );
