@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { FunctionComponent, useState } from 'react';
+import { StateProps } from '../types';
 
-function Counter(props: any) {
-  const [state, setState] = useState({ count: 0 });
+function Counter(props: { render: FunctionComponent }) {
+  const [state, setState] = useState<StateProps>({ count: 0 });
   const incrementCount = () => {
     setState((prevState: any) => {
       return { count: prevState.count + 1 };
