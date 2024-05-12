@@ -1,0 +1,17 @@
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.mouse {
+  cursor: url(./assets/mouse.svg), auto;
+}
+
+.cat {
+  background-image: url(./assets/cat.svg);
+  height: 128px;
+  width: 128px;
+  transition: all ease-in-out 0.15s;
+  transform: translate(-15px, -15px);
+}
